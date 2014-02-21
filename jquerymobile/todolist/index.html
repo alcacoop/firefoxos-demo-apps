@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FirefoxOS Todo List</title>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jquery.mobile-1.4.1.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="jquery.mobile-1.4.1.js"></script>
+
+    <link href="app.css" rel="stylesheet" type="text/css"/>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="home" data-role="page">
+      <div data-role="header" data-position="fixed">
+        <h1>Todo List</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+      </div>
+      <div role="main" class="ui-content">
+
+        <div data-role="popup" id="new-todo-dialog" data-theme="a" class="ui-corner-all">
+          <form>
+            <div style="padding:10px 20px;">
+              <h3>New Todo</h3>
+              <div data-role="controlgroup">
+                <input id="add_todo_field" value="" placeholder="todo" data-theme="a" type="text">
+                <a id="add_todo_button" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">
+                  Save
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div data-role="popup" id="clear-list-dialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            <div data-role="header" data-theme="a">
+            <h1>Empty List?</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h4 class="ui-title">Really empty the todo list?</h4>
+                <p>This action cannot be undone.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                <a id="clear_list_button" href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Delete</a>
+            </div>
+        </div>
+
+        <ul id="todos_listview" data-role="listview" data-filter="true">
+          <li class="todo"><input data-role="none" type="checkbox"><span> Tap to mark completed</span></li>
+          <li class="todo"><input data-role="none" type="checkbox"><span> Swipe to remove item</span></li>
+          <li class="todo"><input data-role="none" type="checkbox"><span> Click New to add item</span></li>
+          <li class="todo"><input data-role="none" type="checkbox"><span> Click Clear to empty list</span></li>
+        </ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-theme="b">
+          <ul>
+            <li>
+              <a href="#new-todo-dialog" data-rel="popup"
+                data-transition="pop" data-position-to="window"
+                data-icon="plus">
+                New
+              </a>
+            </li>
+            <li>
+              <a href="#clear-list-dialog" data-rel="popup"
+                data-transition="pop" data-position-to="window"
+                data-icon="check">
+                Clear
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" data-role="page">
+      <div data-role="header">
+        <h1>About</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+      </div>
+      <div role="main" class="ui-content">
+        <div class="ui-bar ui-bar-a">
+          #FXOS Bari 2014
+        </div>
+        <div class="ui-body">
+          Alca Societa' Cooperativa a r.l.
+          <br/>
+          <a data-rel="external" href="http://alcacoop.it">alcacoop.it</a>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="panel" data-display="overlay"
+         data-theme="b" id="nav-panel">
+      <ul data-role="listview">
+        <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

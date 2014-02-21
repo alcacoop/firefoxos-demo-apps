@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FirefoxOS WeatherHere</title>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jquery.mobile-1.4.1.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="jquery.mobile-1.4.1.js"></script>
+
+    <link href="app.css" rel="stylesheet" type="text/css"/>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="home" data-role="page">
+      <div data-role="header" data-position="fixed">
+        <h1>WeatherHere</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a id="weather-reload" data-icon="refresh" data-iconpos="notext">Reload</a>
+      </div>
+      <div role="main" class="ui-content">
+        <input id="city-search" data-type="search" placeholder="Search City...">
+
+        <div class="ui-corner-all custom-corners">
+          <div class="ui-bar ui-bar-a">
+            <h3 class="weather-city"></h3>
+          </div>
+          <div class="ui-body ui-body-a">
+            <table data-role="table" class="ui-responsive weather-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="label">Weather</th>
+                  <td class="weather-values">
+                    <img src="">
+                    <span></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Temperatures</th>
+                  <td class="temperatures-values"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" data-role="page">
+      <div data-role="header">
+        <h1>About</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+      </div>
+      <div role="main" class="ui-content">
+        <div class="ui-bar ui-bar-a">
+          FirefoxOS Hackaton - Bari 2014
+        </div>
+        <div class="ui-body">
+          Alca Societa' Cooperativa a r.l.
+          <br/>
+          <a data-rel="external" href="http://alcacoop.it">alcacoop.it</a>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="panel" data-position-fixed="true" data-display="overlay"
+         data-theme="b" id="nav-panel">
+      <ul data-role="listview">
+        <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

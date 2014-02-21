@@ -1,0 +1,26 @@
+{
+  "name": "WeatherHere",
+  "version": "0.1",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "permissions": {
+    "systemXHR": {
+      "description": "openweather api requests"
+    }
+  },
+  "description": "jquerymobile example app",
+  "developer": {
+    "name": "ALCA Società Cooperativa a r.l.",
+    "url": "http://alcacoop.it"
+  },
+  "locales": {
+    "en-US": {
+      "name": "WeatherHere",
+      "description": "jquerymobile example app"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "128": "/icon.png"
+  }
+}

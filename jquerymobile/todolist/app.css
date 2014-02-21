@@ -1,0 +1,27 @@
+/* Left transition */
+li.left {
+    -webkit-transition: -webkit-transform 300ms ease;
+    -webkit-transform: translateX(-100%);
+    -moz-transition: -moz-transform 300ms ease;
+    -moz-transform: translateX(-100%);
+    -o-transition: -o-transform 300ms ease;
+    -o-transform: translateX(-100%);
+    transition: transform 300ms ease;
+    transform: translateX(-100%);
+}
+/* Right transition */
+li.right {
+    -webkit-transition: -webkit-transform 300ms ease;
+    -webkit-transform: translateX(100%);
+    -moz-transition: -moz-transform 300ms ease;
+    -moz-transform: translateX(100%);
+    -o-transition: -o-transform 300ms ease;
+    -o-transform: translateX(100%);
+    transition: transform 300ms ease;
+    transform: translateX(100%);
+}
+
+/* Line-through for checked elements */
+li input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}

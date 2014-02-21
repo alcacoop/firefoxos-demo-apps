@@ -1,0 +1,20 @@
+{
+  "name": "TodoList",
+  "version": "0.1",
+  "launch_path": "/index.html",
+  "description": "jquerymobile example app",
+  "developer": {
+    "name": "ALCA Società Cooperativa a r.l.",
+    "url": "http://alcacoop.it"
+  },
+  "locales": {
+    "en-US": {
+      "name": "TodoList",
+      "description": "jquerymobile example app"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "128": "/icon.png"
+  }
+}

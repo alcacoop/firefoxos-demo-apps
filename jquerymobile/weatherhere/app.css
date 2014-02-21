@@ -1,0 +1,7 @@
+.ui-table-reflow tbody th {
+    margin-top: 1em;
+}
+
+.weather-table tbody tr td img {
+    vertical-align: middle;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "RocksFall",
+  "version": "0.1",
+  "fullscreen": true,
+  "orientation": ["portrait"],
+  "launch_path": "/index.html",
+  "description": "phaser example game",
+  "developer": {
+    "name": "ALCA Società Cooperativa a r.l.",
+    "url": "http://alcacoop.it"
+  },
+  "locales": {
+    "en-US": {
+      "name": "RocksFall",
+      "description": "phaser example game"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "128": "/icon.png"
+  }
+}
